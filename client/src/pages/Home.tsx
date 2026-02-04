@@ -4,11 +4,11 @@ import { ChevronDown, Beaker, Zap, TrendingUp, Users } from "lucide-react";
 import { useState } from "react";
 
 /**
- * Industrial Minimalism Design System
+ * Industrial Minimalism Design System - Enhanced
  * - Deep navy (#0F1419) background with sulfur yellow (#FFD700) and acid orange (#FF8C00) accents
- * - IBM Plex Mono for headings, Inter for body text
- * - Geometric dividers, minimal decoration, functional aesthetics
- * - Process flow emphasized through visual hierarchy and spacing
+ * - Playfair Display for h1 (elegant serif), IBM Plex Mono for h2 (technical), IBM Plex Sans for h3-h6
+ * - Roboto for body text (professional, readable)
+ * - Multiple diagrams and industrial photos showing process equipment
  */
 
 export default function Home() {
@@ -19,7 +19,7 @@ export default function Home() {
       {/* Hero Section */}
       <section className="hero-section">
         <div className="hero-content">
-          <h1 className="text-5xl md:text-6xl font-bold mb-4 text-accent">
+          <h1 className="text-5xl md:text-7xl font-bold mb-4 text-accent">
             Sulfuric Acid Production
           </h1>
           <p className="text-xl text-muted-foreground mb-6">
@@ -76,15 +76,15 @@ export default function Home() {
           </div>
           <div className="rounded-lg overflow-hidden border border-border">
             <img 
-              src="/images/process-flow-background.jpg" 
-              alt="Process Flow Visualization" 
+              src="https://private-us-east-1.manuscdn.com/sessionFile/cHEEmKNM7UU47jMzBNQjfs/sandbox/nSD48et9n9XZonDnJdtq5m-img-2_1770177262000_na1fn_Y2F0YWx5c3QtY29udmVydGVyLWRpYWdyYW0.jpg?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvY0hFRW1LTk03VVU0N2pNekJOUWpmcy9zYW5kYm94L25TRDQ4ZXQ5bjlYWm9uRG5KZHRxNW0taW1nLTJfMTc3MDE3NzI2MjAwMF9uYTFmbl9ZMkYwWVd4NWMzUXRZMjl1ZG1WeWRHVnlMV1JwWVdkeVlXMC5qcGc~eC1vc3MtcHJvY2Vzcz1pbWFnZS9yZXNpemUsd18xOTIwLGhfMTkyMC9mb3JtYXQsd2VicC9xdWFsaXR5LHFfODAiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3OTg3NjE2MDB9fX1dfQ__&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=rL1OR8gv9Zj3o1h5PMpPmzDLPMSGbbADNTgIR6O3yezEUlA~Wd0VaFmKFCqtWa83M3IlcpMx-3uIJ~WAS-uRnkqe5Zsq-EdHVgP4NZaIHEK1jtSipxS3OUd-GEhoUt3B~r9Tkj-UveYwPptnb8o2dPBpPcRQPbBEDn3~0Y7yuQUKnPzret28ndtPgtbyQZbbJa-TlnqZ-1ji3tlBCUJCC4uYIPAPtfjCHl~4i84KWFy4GMr-WXQ381wl50OcJQ5fvYkFNfFuUfJ~BP~J0WPTrPUrASilDiCKxB5CFvyZVLRedjPvPTniRlgepbVZubP1Jt3tcsaAgjLXgGQJaU-3ZQ__" 
+              alt="Catalytic Converter Diagram" 
               className="w-full h-auto"
             />
           </div>
         </div>
       </section>
 
-      {/* Main Process Section */}
+      {/* Main Process Section with Diagrams */}
       <section className="container py-16">
         <h2 className="text-3xl font-bold mb-2 text-accent">The Contact Process</h2>
         <div className="accent-line w-16 mb-8"></div>
@@ -113,128 +113,148 @@ export default function Home() {
           </TabsList>
 
           <TabsContent value="step1" className="mt-6">
-            <div className="process-card">
-              <h3 className="text-xl font-bold text-accent mb-3">Step 1: Sulfur Burning</h3>
-              <div className="accent-line w-8"></div>
-              <p className="text-foreground mb-4 leading-relaxed">
-                In the first step, sulfur or sulfur-containing materials are burned in dry air to produce sulfur dioxide:
-              </p>
-              <div className="bg-card border border-border rounded p-4 mb-4">
-                <p className="text-center font-mono text-accent text-lg">S + O₂ → SO₂</p>
-              </div>
-              <p className="text-foreground mb-4 leading-relaxed">
-                In some plants, sulfur dioxide is obtained by roasting metal sulfide ores such as zinc sulfide (ZnS) or copper sulfide (CuS) instead of elemental sulfur. The hot gas mixture is then cooled and passed through purification units, where dust and impurities such as arsenic compounds are removed to prevent catalyst poisoning.
-              </p>
-              <div className="bg-secondary/20 border border-secondary rounded p-4">
-                <p className="text-sm text-muted-foreground">
-                  <span className="highlight-accent">Key Point:</span> Purification is critical to prevent catalyst deactivation in subsequent steps.
+            <div className="space-y-6">
+              <div className="process-card">
+                <h3 className="text-xl font-bold text-accent mb-3">Step 1: Sulfur Burning</h3>
+                <div className="accent-line w-8"></div>
+                <p className="text-foreground mb-4 leading-relaxed">
+                  In the first step, sulfur or sulfur-containing materials are burned in dry air to produce sulfur dioxide:
                 </p>
+                <div className="bg-card border border-border rounded p-4 mb-4">
+                  <p className="text-center font-mono text-accent text-lg">S + O₂ → SO₂</p>
+                </div>
+                <p className="text-foreground mb-4 leading-relaxed">
+                  In some plants, sulfur dioxide is obtained by roasting metal sulfide ores such as zinc sulfide (ZnS) or copper sulfide (CuS) instead of elemental sulfur. The hot gas mixture is then cooled and passed through purification units, where dust and impurities such as arsenic compounds are removed to prevent catalyst poisoning.
+                </p>
+                <div className="bg-secondary/20 border border-secondary rounded p-4">
+                  <p className="text-sm text-muted-foreground">
+                    <span className="highlight-accent">Key Point:</span> Purification is critical to prevent catalyst deactivation in subsequent steps.
+                  </p>
+                </div>
+              </div>
+
+              {/* Sulfur Burning Diagram */}
+              <div className="rounded-lg overflow-hidden border border-border">
+                <img 
+                  src="https://private-us-east-1.manuscdn.com/sessionFile/cHEEmKNM7UU47jMzBNQjfs/sandbox/nSD48et9n9XZonDnJdtq5m-img-1_1770177266000_na1fn_c3VsZnVyLWJ1cm5pbmctZGlhZ3JhbQ.jpg?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvY0hFRW1LTk03VVU0N2pNekJOUWpmcy9zYW5kYm94L25TRDQ4ZXQ5bjlYWm9uRG5KZHRxNW0taW1nLTFfMTc3MDE3NzI2NjAwMF9uYTFmbl9jM1ZzWm5WeUxXSjFjbTVwYm1jdFpHbGhaM0poYlEuanBnP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLHdfMTkyMCxoXzE5MjAvZm9ybWF0LHdlYnAvcXVhbGl0eSxxXzgwIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNzk4NzYxNjAwfX19XX0_&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=wGcDNaSipJdn5az9VzLmb1QPPUnc-7pMB7Qm1PE4rmty9Pw02-fK-ydC6kZTBPzPAPMvF9s0xFhssAX8yI70ABoF001htU4yu6cgdPSaa3BGZoMwl~fp5jWSH-GVpMIOPerf4-x2nugtBLXdQ2zIPTJxx9kzU1MM12CDS9lqKZEQVGhk41g8CI6wdAV6mwHcpNpg23-usa-b815ugpjDm3DHE2~JkvDYrLnox2IHEX1xwyM72nluruv-qzVDkpgXdIHq6UKjfycnX9XLIK-yFFx~zE5BDCHRAgvrkRrybH~RyZdUzCtkJPYXssekZuw52eC6trT~82gO4sQzdLhpAA__" 
+                  alt="Sulfur Burning Furnace Process Diagram" 
+                  className="w-full h-auto"
+                />
               </div>
             </div>
           </TabsContent>
 
           <TabsContent value="step2" className="mt-6">
-            <div className="process-card">
-              <h3 className="text-xl font-bold text-accent mb-3">Step 2: Catalytic Oxidation</h3>
-              <div className="accent-line w-8"></div>
-              <p className="text-foreground mb-4 leading-relaxed">
-                In the second step, purified sulfur dioxide is oxidized to sulfur trioxide over a solid vanadium(V) oxide catalyst according to the equilibrium reaction:
-              </p>
-              <div className="bg-card border border-border rounded p-4 mb-4">
-                <p className="text-center font-mono text-accent text-lg">2SO₂(g) + O₂(g) ⇌ 2SO₃(g)</p>
+            <div className="space-y-6">
+              <div className="process-card">
+                <h3 className="text-xl font-bold text-accent mb-3">Step 2: Catalytic Oxidation</h3>
+                <div className="accent-line w-8"></div>
+                <p className="text-foreground mb-4 leading-relaxed">
+                  In the second step, purified sulfur dioxide is oxidized to sulfur trioxide over a solid vanadium(V) oxide catalyst according to the equilibrium reaction:
+                </p>
+                <div className="bg-card border border-border rounded p-4 mb-4">
+                  <p className="text-center font-mono text-accent text-lg">2SO₂(g) + O₂(g) ⇌ 2SO₃(g)</p>
+                </div>
+                <p className="text-foreground mb-4 leading-relaxed">
+                  <span className="highlight-accent">Typical operating conditions:</span>
+                </p>
+                <ul className="space-y-2 mb-4 text-foreground">
+                  <li className="process-step">Temperature: ~450°C</li>
+                  <li className="process-step">Pressure: ~200 kPa (≈2 atm)</li>
+                  <li className="process-step">Catalyst: Vanadium(V) oxide (V₂O₅) on porous support</li>
+                </ul>
+                <div className="bg-secondary/20 border border-secondary rounded p-4">
+                  <p className="text-sm text-muted-foreground mb-2">
+                    <span className="highlight-accent">Why these conditions?</span>
+                  </p>
+                  <p className="text-sm text-muted-foreground">
+                    Because the reaction is exothermic, lower temperature favors product formation but slows reaction rate. Higher temperature speeds up reaction but reduces yield. The 450°C compromise with catalyst provides both reasonable rate and high conversion. Multiple catalyst beds with cooling between them maintain optimal temperature.
+                  </p>
+                </div>
               </div>
-              <p className="text-foreground mb-4 leading-relaxed">
-                <span className="highlight-accent">Typical operating conditions:</span>
-              </p>
-              <ul className="space-y-2 mb-4 text-foreground">
-                <li className="process-step">Temperature: ~450°C</li>
-                <li className="process-step">Pressure: ~200 kPa (≈2 atm)</li>
-                <li className="process-step">Catalyst: Vanadium(V) oxide (V₂O₅) on porous support</li>
-              </ul>
-              <div className="bg-secondary/20 border border-secondary rounded p-4">
-                <p className="text-sm text-muted-foreground mb-2">
-                  <span className="highlight-accent">Why these conditions?</span>
-                </p>
-                <p className="text-sm text-muted-foreground">
-                  Because the reaction is exothermic, lower temperature favors product formation but slows reaction rate. Higher temperature speeds up reaction but reduces yield. The 450°C compromise with catalyst provides both reasonable rate and high conversion. Multiple catalyst beds with cooling between them maintain optimal temperature.
-                </p>
+
+              {/* Catalyst Converter Diagram */}
+              <div className="rounded-lg overflow-hidden border border-border">
+                <img 
+                  src="https://private-us-east-1.manuscdn.com/sessionFile/cHEEmKNM7UU47jMzBNQjfs/sandbox/nSD48et9n9XZonDnJdtq5m-img-2_1770177262000_na1fn_Y2F0YWx5c3QtY29udmVydGVyLWRpYWdyYW0.jpg?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvY0hFRW1LTk03VVU0N2pNekJOUWpmcy9zYW5kYm94L25TRDQ4ZXQ5bjlYWm9uRG5KZHRxNW0taW1nLTJfMTc3MDE3NzI2MjAwMF9uYTFmbl9ZMkYwWVd4NWMzUXRZMjl1ZG1WeWRHVnlMV1JwWVdkeVlXMC5qcGc~eC1vc3MtcHJvY2Vzcz1pbWFnZS9yZXNpemUsd18xOTIwLGhfMTkyMC9mb3JtYXQsd2VicC9xdWFsaXR5LHFfODAiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3OTg3NjE2MDB9fX1dfQ__&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=rL1OR8gv9Zj3o1h5PMpPmzDLPMSGbbADNTgIR6O3yezEUlA~Wd0VaFmKFCqtWa83M3IlcpMx-3uIJ~WAS-uRnkqe5Zsq-EdHVgP4NZaIHEK1jtSipxS3OUd-GEhoUt3B~r9Tkj-UveYwPptnb8o2dPBpPcRQPbBEDn3~0Y7yuQUKnPzret28ndtPgtbyQZbbJa-TlnqZ-1ji3tlBCUJCC4uYIPAPtfjCHl~4i84KWFy4GMr-WXQ381wl50OcJQ5fvYkFNfFuUfJ~BP~J0WPTrPUrASilDiCKxB5CFvyZVLRedjPvPTniRlgepbVZubP1Jt3tcsaAgjLXgGQJaU-3ZQ__" 
+                  alt="Catalytic Converter for SO2 to SO3 Oxidation" 
+                  className="w-full h-auto"
+                />
               </div>
             </div>
           </TabsContent>
 
           <TabsContent value="step3" className="mt-6">
-            <div className="process-card">
-              <h3 className="text-xl font-bold text-accent mb-3">Step 3: Absorption & Dilution</h3>
-              <div className="accent-line w-8"></div>
-              <p className="text-foreground mb-4 leading-relaxed">
-                In the final step, sulfur trioxide is absorbed in concentrated sulfuric acid to form oleum (disulfuric acid), which is then carefully diluted with water to give more sulfuric acid:
-              </p>
-              <div className="bg-card border border-border rounded p-4 mb-4">
-                <p className="text-center font-mono text-accent text-lg">SO₃ + H₂SO₄ → H₂S₂O₇</p>
-              </div>
-              <p className="text-foreground mb-4 leading-relaxed">
-                <span className="highlight-orange">Why not react SO₃ directly with water?</span> Direct reaction of sulfur trioxide with water forms a dense mist of acid droplets that is difficult to condense and handle safely. Absorption in concentrated acid avoids this hazard.
-              </p>
-              <p className="text-foreground mb-4 leading-relaxed">
-                The final product is purified by controlled absorption, cooling, and storage in corrosion-resistant tanks to obtain commercial sulfuric acid at approximately <span className="highlight-accent">98% concentration</span>.
-              </p>
-              <div className="bg-secondary/20 border border-secondary rounded p-4">
-                <p className="text-sm text-muted-foreground">
-                  <span className="highlight-accent">Raw Materials:</span> Elemental sulfur (from natural deposits or fossil fuel desulfurization), oxygen (from air), and water (for dilution).
+            <div className="space-y-6">
+              <div className="process-card">
+                <h3 className="text-xl font-bold text-accent mb-3">Step 3: Absorption & Dilution</h3>
+                <div className="accent-line w-8"></div>
+                <p className="text-foreground mb-4 leading-relaxed">
+                  In the final step, sulfur trioxide is absorbed in concentrated sulfuric acid to form oleum (disulfuric acid), which is then carefully diluted with water to give more sulfuric acid:
                 </p>
+                <div className="bg-card border border-border rounded p-4 mb-4">
+                  <p className="text-center font-mono text-accent text-lg">SO₃ + H₂SO₄ → H₂S₂O₇</p>
+                </div>
+                <p className="text-foreground mb-4 leading-relaxed">
+                  <span className="highlight-orange">Why not react SO₃ directly with water?</span> Direct reaction of sulfur trioxide with water forms a dense mist of acid droplets that is difficult to condense and handle safely. Absorption in concentrated acid avoids this hazard.
+                </p>
+                <p className="text-foreground mb-4 leading-relaxed">
+                  The final product is purified by controlled absorption, cooling, and storage in corrosion-resistant tanks to obtain commercial sulfuric acid at approximately <span className="highlight-accent">98% concentration</span>.
+                </p>
+                <div className="bg-secondary/20 border border-secondary rounded p-4">
+                  <p className="text-sm text-muted-foreground">
+                    <span className="highlight-accent">Raw Materials:</span> Elemental sulfur (from natural deposits or fossil fuel desulfurization), oxygen (from air), and water (for dilution).
+                  </p>
+                </div>
+              </div>
+
+              {/* Absorption Tower Diagram */}
+              <div className="rounded-lg overflow-hidden border border-border">
+                <img 
+                  src="https://private-us-east-1.manuscdn.com/sessionFile/cHEEmKNM7UU47jMzBNQjfs/sandbox/nSD48et9n9XZonDnJdtq5m-img-3_1770177272000_na1fn_YWJzb3JwdGlvbi10b3dlci1kaWFncmFt.jpg?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvY0hFRW1LTk03VVU0N2pNekJOUWpmcy9zYW5kYm94L25TRDQ4ZXQ5bjlYWm9uRG5KZHRxNW0taW1nLTNfMTc3MDE3NzI3MjAwMF9uYTFmbl9ZV0p6YjNKd2RHbHZiaTEwYjNkbGNpMWthV0ZuY21GdC5qcGc~eC1vc3MtcHJvY2Vzcz1pbWFnZS9yZXNpemUsd18xOTIwLGhfMTkyMC9mb3JtYXQsd2VicC9xdWFsaXR5LHFfODAiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3OTg3NjE2MDB9fX1dfQ__&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=ggQk9FnYQBZZDJLgFseFwyRdlFokQ9kboN9eh03Ppq4GnqNUaRDMGlhgFynRLr9S5JkeqN9M4um7vSv8worXVRAygcMdm2u-kDc7-eNbQM-k9ubOV-sAtLRrtm-iPkO4atkTkG~CIT6xD09C0DHAWjTx3hADOYVCjApA0ziYNihayb3lEo~biVGOYSDX~cPBEc1mhTsxA3nDLm8cslMIY77IjmQttZAzqdhWkXvtf6-wRtmLlQND6VCnu7~HdkJWMlxq28TFlAiLb3HiG39XIzicWrNfGcaeS4PktUKG0hRN45UqIMm19IfvZ0ldJHt~zKexgCGkZzADdtiUW1F-SA__" 
+                  alt="SO3 Absorption Tower Diagram" 
+                  className="w-full h-auto"
+                />
               </div>
             </div>
           </TabsContent>
         </Tabs>
       </section>
 
-      {/* Process Diagram Section */}
+      {/* Industrial Facility Photos */}
       <section className="container py-16">
-        <h2 className="text-3xl font-bold mb-2 text-accent">Process Flow Diagram</h2>
+        <h2 className="text-3xl font-bold mb-2 text-accent">Industrial Facilities</h2>
         <div className="accent-line w-16 mb-8"></div>
         <p className="text-muted-foreground mb-8">
-          The complete Contact process involves multiple stages with heat recovery and gas cleaning systems.
+          Real-world sulfuric acid production plants showing the scale and complexity of industrial operations.
         </p>
-        <div className="bg-card border border-border rounded-lg p-8">
-          <div className="space-y-4">
-            <div className="flex items-center justify-between">
-              <div className="flex-1 text-center">
-                <div className="bg-accent text-accent-foreground rounded-full w-12 h-12 flex items-center justify-center mx-auto font-bold mb-2">1</div>
-                <p className="font-mono font-bold text-accent">Sulfur Burning</p>
-                <p className="text-sm text-muted-foreground">S + O₂ → SO₂</p>
-              </div>
-              <div className="text-accent text-2xl">→</div>
-              <div className="flex-1 text-center">
-                <div className="bg-accent text-accent-foreground rounded-full w-12 h-12 flex items-center justify-center mx-auto font-bold mb-2">2</div>
-                <p className="font-mono font-bold text-accent">Gas Cleaning</p>
-                <p className="text-sm text-muted-foreground">Remove impurities</p>
-              </div>
-              <div className="text-accent text-2xl">→</div>
-              <div className="flex-1 text-center">
-                <div className="bg-accent text-accent-foreground rounded-full w-12 h-12 flex items-center justify-center mx-auto font-bold mb-2">3</div>
-                <p className="font-mono font-bold text-accent">Catalytic Converter</p>
-                <p className="text-sm text-muted-foreground">2SO₂ + O₂ ⇌ 2SO₃</p>
-              </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <div className="rounded-lg overflow-hidden border border-border">
+            <img 
+              src="https://private-us-east-1.manuscdn.com/sessionFile/cHEEmKNM7UU47jMzBNQjfs/sandbox/nSD48et9n9XZonDnJdtq5m-img-4_1770177270000_na1fn_aW5kdXN0cmlhbC1mYWNpbGl0eS1waG90bw.jpg?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvY0hFRW1LTk03VVU0N2pNekJOUWpmcy9zYW5kYm94L25TRDQ4ZXQ5bjlYWm9uRG5KZHRxNW0taW1nLTRfMTc3MDE3NzI3MDAwMF9uYTFmbl9hVzVrZFhOMGNtbGhiQzFtWVdOcGJHbDBlUzF3YUc5MGJ3LmpwZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzE5MjAsaF8xOTIwL2Zvcm1hdCx3ZWJwL3F1YWxpdHkscV84MCIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc5ODc2MTYwMH19fV19&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=gcAPcy8yFQ1d055P9km8mrwPSNhnURXK9os3GYSTi3kvqU0RqmyNfjGsXQ256iGcBrwTgMWGat7BXzuI6XCfxvG~DB2FkpD5bNi5ioS5eSfDSnptsJUX5zmdXqr6gcKgei52e5R0TaQVuE56pMtzunwQCPIChQx0lRF-gZWeQjvK0YHF6gagujFXF3-okJnQcCIT5GtZdABAQ-PmIS3gPscAVdyMdMQ5nm1ZZrf1TPoJ-xFXwDuZLjUv79ERRFHAGOGpYMFheZcwis9sY-dJV~rvOErHkoptM4J~YHDTpJ5NT8DZwc4HlGDsP32Rj5~OabZvvLb9qGISw5Je2AHN4Q__" 
+              alt="Large-scale Sulfuric Acid Production Facility" 
+              className="w-full h-auto"
+            />
+            <div className="bg-card border-t border-border p-4">
+              <h4 className="font-bold text-accent mb-2">Large-Scale Production Facility</h4>
+              <p className="text-sm text-muted-foreground">
+                Multiple tall cylindrical reactors and distillation columns connected by extensive piping networks. Industrial lighting and safety railings visible.
+              </p>
             </div>
-            <div className="text-center text-accent text-2xl">↓</div>
-            <div className="flex items-center justify-between">
-              <div className="flex-1 text-center">
-                <div className="bg-accent text-accent-foreground rounded-full w-12 h-12 flex items-center justify-center mx-auto font-bold mb-2">4</div>
-                <p className="font-mono font-bold text-accent">Cooling</p>
-                <p className="text-sm text-muted-foreground">Temperature control</p>
-              </div>
-              <div className="text-accent text-2xl">→</div>
-              <div className="flex-1 text-center">
-                <div className="bg-accent text-accent-foreground rounded-full w-12 h-12 flex items-center justify-center mx-auto font-bold mb-2">5</div>
-                <p className="font-mono font-bold text-accent">Absorption Tower</p>
-                <p className="text-sm text-muted-foreground">SO₃ + H₂SO₄</p>
-              </div>
-              <div className="text-accent text-2xl">→</div>
-              <div className="flex-1 text-center">
-                <div className="bg-accent text-accent-foreground rounded-full w-12 h-12 flex items-center justify-center mx-auto font-bold mb-2">6</div>
-                <p className="font-mono font-bold text-accent">Product Storage</p>
-                <p className="text-sm text-muted-foreground">98% H₂SO₄</p>
-              </div>
+          </div>
+
+          <div className="rounded-lg overflow-hidden border border-border">
+            <img 
+              src="https://private-us-east-1.manuscdn.com/sessionFile/cHEEmKNM7UU47jMzBNQjfs/sandbox/nSD48et9n9XZonDnJdtq5m-img-5_1770177271000_na1fn_cmVhY3Rvci1lcXVpcG1lbnQtcGhvdG8.jpg?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvY0hFRW1LTk03VVU0N2pNekJOUWpmcy9zYW5kYm94L25TRDQ4ZXQ5bjlYWm9uRG5KZHRxNW0taW1nLTVfMTc3MDE3NzI3MTAwMF9uYTFmbl9jbVZoWTNSdmNpMWxjWFZwY0cxbGJuUXRjR2h2ZEc4LmpwZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzE5MjAsaF8xOTIwL2Zvcm1hdCx3ZWJwL3F1YWxpdHkscV84MCIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc5ODc2MTYwMH19fV19&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=IgrWyF06KnZxNs57QrNjvqOWhJXEftqvkBNPlqlzrUG85WiJs7Em2wahoC0r2fR76FrQqoOlwOj9uH~xEO~RiyBmJcUFD5NYM04pf0xenfNnZ8htBn-ml5tFT7vzLvFwx9dbVaWXDWy1lW--zb1v1rhJcjv1Slph9Ug5DT6yHFSI5dDr8pk81QqsX7PPUGDvLy8enKqyEeoM~8u6C30kjjkLEFw4QbcpMk2K4N2OcIfqkE7Aio4Kzm8mP3SCCQ3F84Ftz6ZBRDWSs0M1UFdJ~f8SvQ2MLq~0hxlzk84tWMR5wMYvfuGcNtqUMhCzriGhxxkzLRklMaPZAcafsqVd7A__" 
+              alt="Reactor Equipment and Heat Exchanger" 
+              className="w-full h-auto"
+            />
+            <div className="bg-card border-t border-border p-4">
+              <h4 className="font-bold text-accent mb-2">Reactor Equipment & Heat Exchanger</h4>
+              <p className="text-sm text-muted-foreground">
+                Close-up of industrial reactor vessel with stainless steel construction. Pipes, valves, instrumentation, and yellow safety markings visible.
+              </p>
             </div>
           </div>
         </div>
@@ -365,7 +385,7 @@ export default function Home() {
             <h3 className="text-lg font-bold text-accent mb-3">Positive Impacts</h3>
             <ul className="space-y-2 text-foreground text-sm">
               <li className="process-step">
-                <span className="highlight-accent">Waste valorization:</span> Sulfur from fossil fuel desulfurization converts polluting waste into useful raw material
+                <span className="highlight-accent">Waste valorization:</span> Sulfur from fossil fuel desulfurification converts polluting waste into useful raw material
               </li>
               <li className="process-step">
                 <span className="highlight-accent">Emission control:</span> Modern absorption towers and tail-gas treatment minimize SO₂ and SO₃ atmospheric release
