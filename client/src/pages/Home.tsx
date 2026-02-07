@@ -48,8 +48,12 @@ export default function Home() {
             <p className="text-sm text-muted-foreground">10F</p>
           </div>
           <div className="team-member">
-            <div className="w-24 h-24 rounded-full mx-auto mb-3 bg-secondary border-2 border-accent overflow-hidden flex items-center justify-center">
-              <Users className="w-12 h-12 text-accent" />
+            <div className="w-24 h-24 rounded-full mx-auto mb-3 bg-secondary border-2 border-accent overflow-hidden">
+              <img 
+                src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663327230884/SqZnrcbcuZYeulag.jpg" 
+                alt="Zhagipparov Alizar" 
+                className="w-full h-full object-cover"
+              />
             </div>
             <h3>Zhagipparov Alizar</h3>
             <p className="text-sm text-muted-foreground">10F</p>
