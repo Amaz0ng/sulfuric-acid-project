@@ -18,6 +18,7 @@ export default function ModelViewer3D({ modelUrl, title = "3D Model" }: ModelVie
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [isAutoRotating, setIsAutoRotating] = useState(true);
+  const [modelLoaded, setModelLoaded] = useState(false);
 
   useEffect(() => {
     if (!containerRef.current) return;
@@ -105,6 +106,14 @@ export default function ModelViewer3D({ modelUrl, title = "3D Model" }: ModelVie
       // Add crossOrigin attribute for CORS
       loader.setCrossOrigin('anonymous');
       
+      // Add timeout to detect hanging requests
+      const loadTimeout = setTimeout(() => {
+        if (!modelLoaded) {
+          setError('Model loading timed out. Please refresh the page.');
+          setIsLoading(false);
+        }
+      }, 15000);
+      
       loader.load(
         modelUrl,
         (gltf: any) => {
@@ -131,6 +140,8 @@ export default function ModelViewer3D({ modelUrl, title = "3D Model" }: ModelVie
             });
 
             scene.add(model);
+            setModelLoaded(true);
+            clearTimeout(loadTimeout);
             setIsLoading(false);
           } catch (err) {
             console.error('Error processing model:', err);
@@ -177,6 +188,7 @@ export default function ModelViewer3D({ modelUrl, title = "3D Model" }: ModelVie
       window.addEventListener('resize', handleResize);
 
       return () => {
+        clearTimeout(loadTimeout);
         window.removeEventListener('resize', handleResize);
         if (containerRef.current && renderer.domElement.parentNode === containerRef.current) {
           containerRef.current.removeChild(renderer.domElement);
