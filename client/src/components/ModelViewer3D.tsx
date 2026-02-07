@@ -99,34 +99,44 @@ export default function ModelViewer3D({ modelUrl, title = "3D Model" }: ModelVie
         }
       }, { passive: false });
 
-      // Load model
+      // Load model with CORS handling
       const loader = new GLTFLoader();
+      
+      // Add crossOrigin attribute for CORS
+      loader.setCrossOrigin('anonymous');
+      
       loader.load(
         modelUrl,
         (gltf: any) => {
-          const model = gltf.scene;
-          modelRef.current = model;
+          try {
+            const model = gltf.scene;
+            modelRef.current = model;
 
-          // Center and scale model
-          const box = new THREE.Box3().setFromObject(model);
-          const center = box.getCenter(new THREE.Vector3());
-          const size = box.getSize(new THREE.Vector3());
-          const maxDim = Math.max(size.x, size.y, size.z);
-          const scale = 4 / maxDim;
+            // Center and scale model
+            const box = new THREE.Box3().setFromObject(model);
+            const center = box.getCenter(new THREE.Vector3());
+            const size = box.getSize(new THREE.Vector3());
+            const maxDim = Math.max(size.x, size.y, size.z);
+            const scale = 4 / maxDim;
 
-          model.position.sub(center.multiplyScalar(scale));
-          model.scale.multiplyScalar(scale);
+            model.position.sub(center.multiplyScalar(scale));
+            model.scale.multiplyScalar(scale);
 
-          // Ensure all meshes cast and receive shadows
-          model.traverse((child: any) => {
-            if (child instanceof THREE.Mesh) {
-              child.castShadow = true;
-              child.receiveShadow = true;
-            }
-          });
+            // Ensure all meshes cast and receive shadows
+            model.traverse((child: any) => {
+              if (child instanceof THREE.Mesh) {
+                child.castShadow = true;
+                child.receiveShadow = true;
+              }
+            });
 
-          scene.add(model);
-          setIsLoading(false);
+            scene.add(model);
+            setIsLoading(false);
+          } catch (err) {
+            console.error('Error processing model:', err);
+            setError('Error processing 3D model.');
+            setIsLoading(false);
+          }
         },
         (progress: any) => {
           // Loading progress
@@ -134,7 +144,7 @@ export default function ModelViewer3D({ modelUrl, title = "3D Model" }: ModelVie
         },
         (err: any) => {
           console.error('Error loading model:', err);
-          setError('Failed to load 3D model. Please try again.');
+          setError('Failed to load 3D model. The file may be corrupted or inaccessible.');
           setIsLoading(false);
         }
       );
