@@ -40,13 +40,31 @@ export default function Home() {
           10F Class, NIS IB Astana, Kazakhstan
         </p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {["Suraganov Amanzhan", "Zhagipparov Alizar", "Uteseitov Ali"].map((name) => (
-            <div key={name} className="team-member">
-              <Users className="w-8 h-8 text-accent mx-auto mb-3" />
-              <h3>{name}</h3>
-              <p className="text-sm text-muted-foreground">10F</p>
+          <div className="team-member">
+            <div className="w-24 h-24 rounded-full mx-auto mb-3 bg-secondary border-2 border-accent overflow-hidden flex items-center justify-center">
+              <Users className="w-12 h-12 text-accent" />
             </div>
-          ))}
+            <h3>Suraganov Amanzhan</h3>
+            <p className="text-sm text-muted-foreground">10F</p>
+          </div>
+          <div className="team-member">
+            <div className="w-24 h-24 rounded-full mx-auto mb-3 bg-secondary border-2 border-accent overflow-hidden flex items-center justify-center">
+              <Users className="w-12 h-12 text-accent" />
+            </div>
+            <h3>Zhagipparov Alizar</h3>
+            <p className="text-sm text-muted-foreground">10F</p>
+          </div>
+          <div className="team-member">
+            <div className="w-24 h-24 rounded-full mx-auto mb-3 bg-secondary border-2 border-accent overflow-hidden">
+              <img 
+                src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663327230884/tWwiHhuUKfXHquWU.jpg" 
+                alt="Uteseitov Ali" 
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <h3>Uteseitov Ali</h3>
+            <p className="text-sm text-muted-foreground">10F</p>
+          </div>
         </div>
       </section>
 
