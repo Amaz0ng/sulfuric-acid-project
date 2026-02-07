@@ -2,6 +2,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ChevronDown, Beaker, Zap, TrendingUp, Users } from "lucide-react";
 import { useState } from "react";
+import ModelViewer3D from "@/components/ModelViewer3D";
 
 /**
  * Industrial Minimalism Design System - Enhanced
@@ -265,63 +266,20 @@ export default function Home() {
         <h2 className="text-3xl font-bold mb-2 text-accent">3D Process Model</h2>
         <div className="accent-line w-16 mb-8"></div>
         <p className="text-muted-foreground mb-8">
-          Interactive visualization of the Contact process equipment and flow.
+          Interactive 3D visualization of the sulfuric acid production process. Drag to rotate, scroll to zoom, and use the controls below.
         </p>
         
-        <div className="model-placeholder">
-          <Beaker className="w-16 h-16 text-accent opacity-50" />
-          <h3 className="text-xl font-bold text-accent">3D Model Integration</h3>
-          <p>
-            <span className="highlight-accent">To embed your 3D model here, you have several options:</span>
+        <div className="w-full h-96 rounded-lg overflow-hidden border border-border">
+          <ModelViewer3D 
+            modelUrl="https://files.manuscdn.com/user_upload_by_module/session_file/310519663327230884/GmfHrEGfYgnIddBH.glb"
+            title="Sulfuric Acid Production Process"
+          />
+        </div>
+        
+        <div className="w-full mt-6 bg-secondary/20 border border-secondary rounded p-4">
+          <p className="text-sm text-muted-foreground">
+            <span className="highlight-accent">🎮 Interactive Controls:</span> Left-click and drag to rotate the model • Scroll wheel to zoom in/out • Use the Reset button to return to default view • Click Play/Pause to toggle auto-rotation • Fullscreen button for immersive viewing
           </p>
-          
-          <div className="w-full mt-6 space-y-4 text-left">
-            <div className="bg-card border border-border rounded p-4">
-              <h4 className="font-bold text-accent mb-2">Option 1: Three.js / Babylon.js</h4>
-              <p className="text-sm text-muted-foreground mb-2">
-                Create an interactive 3D visualization using JavaScript libraries. Perfect for custom models with animations.
-              </p>
-              <code className="text-xs bg-background p-2 rounded block text-accent">
-                npm install three
-              </code>
-            </div>
-
-            <div className="bg-card border border-border rounded p-4">
-              <h4 className="font-bold text-accent mb-2">Option 2: Sketchfab Embed</h4>
-              <p className="text-sm text-muted-foreground mb-2">
-                Upload your model to Sketchfab and embed it using an iframe. Easiest method for pre-made models.
-              </p>
-              <code className="text-xs bg-background p-2 rounded block text-accent overflow-x-auto">
-                &lt;iframe src="https://sketchfab.com/models/..."&gt;&lt;/iframe&gt;
-              </code>
-            </div>
-
-            <div className="bg-card border border-border rounded p-4">
-              <h4 className="font-bold text-accent mb-2">Option 3: glTF/GLTF Format</h4>
-              <p className="text-sm text-muted-foreground mb-2">
-                Export your model as .glb or .gltf and load it with Three.js GLTFLoader for optimized performance.
-              </p>
-              <code className="text-xs bg-background p-2 rounded block text-accent">
-                model.glb (recommended format)
-              </code>
-            </div>
-
-            <div className="bg-card border border-border rounded p-4">
-              <h4 className="font-bold text-accent mb-2">Option 4: Model-Viewer Web Component</h4>
-              <p className="text-sm text-muted-foreground mb-2">
-                Use Google's model-viewer for a lightweight, responsive 3D viewer with minimal setup.
-              </p>
-              <code className="text-xs bg-background p-2 rounded block text-accent">
-                &lt;model-viewer src="model.glb"&gt;&lt;/model-viewer&gt;
-              </code>
-            </div>
-          </div>
-
-          <div className="w-full mt-6 bg-secondary/20 border border-secondary rounded p-4 text-left">
-            <p className="text-sm text-muted-foreground">
-              <span className="highlight-accent">Next Steps:</span> Prepare your 3D model file, choose your integration method, and replace this placeholder with your model. The model will be fully interactive and responsive on all devices.
-            </p>
-          </div>
         </div>
       </section>
 
