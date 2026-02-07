@@ -1,8 +1,6 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ChevronDown, Beaker, Zap, TrendingUp, Users } from "lucide-react";
 import { useState } from "react";
-import ModelViewer3D from "@/components/ModelViewer3D";
 
 /**
  * Industrial Minimalism Design System - Enhanced
@@ -10,6 +8,7 @@ import ModelViewer3D from "@/components/ModelViewer3D";
  * - Playfair Display for h1 (elegant serif), IBM Plex Mono for h2 (technical), IBM Plex Sans for h3-h6
  * - Roboto for body text (professional, readable)
  * - Realistic industrial photos from internet sources
+ * - Sketchfab 3D model embed for interactive visualization
  */
 
 export default function Home() {
@@ -269,19 +268,23 @@ export default function Home() {
         <h2 className="text-3xl font-bold mb-2 text-accent">3D Process Model</h2>
         <div className="accent-line w-16 mb-8"></div>
         <p className="text-muted-foreground mb-8">
-          Interactive 3D visualization of the sulfuric acid production process. Drag to rotate, scroll to zoom, and use the controls below.
+          Interactive 3D visualization of the sulfuric acid production process created by your team. Drag to rotate, scroll to zoom, and explore the equipment.
         </p>
         
-        <div className="w-full h-96 rounded-lg overflow-hidden border border-border">
-          <ModelViewer3D 
-            modelUrl="https://files.manuscdn.com/user_upload_by_module/session_file/310519663327230884/GmfHrEGfYgnIddBH.glb"
-            title="Sulfuric Acid Production Process"
+        <div className="w-full rounded-lg overflow-hidden border border-border" style={{ aspectRatio: '16 / 9' }}>
+          <iframe 
+            title="Sulfuric Acid Process | Chemistry | D criterion" 
+            frameBorder={0} 
+            allowFullScreen 
+            allow="autoplay; fullscreen; xr-spatial-tracking" 
+            src="https://sketchfab.com/models/97bb289505dd4e0dbded8fa6105ba1be/embed"
+            style={{ width: '100%', height: '100%' }}
           />
         </div>
         
         <div className="w-full mt-6 bg-secondary/20 border border-secondary rounded p-4">
           <p className="text-sm text-muted-foreground">
-            <span className="highlight-accent">🎮 Interactive Controls:</span> Left-click and drag to rotate the model • Scroll wheel to zoom in/out • Use the Reset button to return to default view • Click Play/Pause to toggle auto-rotation • Fullscreen button for immersive viewing
+            <span className="highlight-accent">🎮 Interactive Controls:</span> Left-click and drag to rotate the model • Scroll wheel to zoom in/out • Right-click to pan • Use fullscreen button for immersive viewing
           </p>
         </div>
       </section>
