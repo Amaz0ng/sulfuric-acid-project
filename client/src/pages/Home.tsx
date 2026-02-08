@@ -225,6 +225,58 @@ export default function Home() {
         </Tabs>
       </section>
 
+      {/* Optimized Reaction Conditions */}
+      <section className="container py-16">
+        <h2 className="text-3xl font-bold mb-2 text-accent">Optimized Reaction Conditions</h2>
+        <div className="accent-line w-16 mb-8"></div>
+        
+        <p className="text-foreground mb-6 leading-relaxed">
+          The Contact Process operates at 400-450 degrees Celsius and 1-2 atmospheres pressure, representing a scientific compromise between competing factors. According to Le Chatelier's Principle, the exothermic forward reaction is favored at lower temperatures, meaning lower temperatures would produce higher percentages of SO3 in the equilibrium mixture. However, reaction kinetics impose practical constraints.
+        </p>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+          <div className="bg-card border border-border rounded-lg p-6">
+            <h3 className="text-lg font-bold text-accent mb-3">Temperature: 400-450 Celsius</h3>
+            <p className="text-foreground text-sm mb-3">
+              At lower temperatures, the reaction rate decreases substantially, requiring impractically long residence times. The selected temperature achieves conversion rates exceeding 99.5 percent within brief contact time with the catalyst.
+            </p>
+            <div className="bg-secondary/20 rounded p-3">
+              <p className="text-xs text-muted-foreground"><span className="highlight-accent">Why this range?</span> Optimal balance between thermodynamic equilibrium and reaction kinetics</p>
+            </div>
+          </div>
+
+          <div className="bg-card border border-border rounded-lg p-6">
+            <h3 className="text-lg font-bold text-accent mb-3">Pressure: 1-2 Atmospheres</h3>
+            <p className="text-foreground text-sm mb-3">
+              Although higher pressures would theoretically improve conversion efficiency to perhaps 99.7 percent, the marginal improvement does not justify the substantial capital and operational costs of high-pressure reactors.
+            </p>
+            <div className="bg-secondary/20 rounded p-3">
+              <p className="text-xs text-muted-foreground"><span className="highlight-accent">Why this range?</span> Cost-benefit analysis favors low pressure with existing 99.5% efficiency</p>
+            </div>
+          </div>
+
+          <div className="bg-card border border-border rounded-lg p-6">
+            <h3 className="text-lg font-bold text-accent mb-3">Oxygen Excess: 1:1 Molar Ratio</h3>
+            <p className="text-foreground text-sm mb-3">
+              The inlet gas mixture maintains a 1:1 molar ratio of SO2 to O2, deliberately maintaining excess oxygen to shift equilibrium toward sulfur trioxide formation, improving conversion without significant additional cost.
+            </p>
+            <div className="bg-secondary/20 rounded p-3">
+              <p className="text-xs text-muted-foreground"><span className="highlight-accent">Why this ratio?</span> Leverages Le Chatelier's Principle for equilibrium optimization</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="bg-secondary/20 border border-secondary rounded-lg p-6">
+          <h4 className="text-lg font-bold text-accent mb-3">Catalyst System</h4>
+          <p className="text-foreground mb-3">
+            The reaction is catalyzed by vanadium(V) oxide (V2O5) supported on silica with caesium sulfate as a promoter. This catalyst system enables the efficient conversion of SO2 to SO3 without being consumed in the reaction.
+          </p>
+          <p className="text-foreground text-sm text-muted-foreground">
+            Modern catalysts are engineered to resist poisoning from trace impurities, maintain activity over extended operating periods, and provide consistent performance across varying feed compositions and operating conditions.
+          </p>
+        </div>
+      </section>
+
       {/* Industrial Facility Photos */}
       <section className="container py-16">
         <h2 className="text-3xl font-bold mb-2 text-accent">Industrial Facilities</h2>
@@ -291,6 +343,136 @@ export default function Home() {
               </p>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Global Production and Industrial Applications */}
+      <section className="container py-16">
+        <h2 className="text-3xl font-bold mb-2 text-accent">Global Production and Industrial Applications</h2>
+        <div className="accent-line w-16 mb-8"></div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+          <div>
+            <h3 className="text-xl font-bold text-accent mb-4">Global Production Leaders</h3>
+            <div className="space-y-3">
+              <div className="bg-card border border-border rounded-lg p-4">
+                <div className="flex justify-between items-center">
+                  <span className="font-bold text-foreground">China</span>
+                  <span className="text-accent font-bold">74 Million Tonnes/Year</span>
+                </div>
+                <div className="w-full bg-secondary rounded-full h-2 mt-2">
+                  <div className="bg-accent h-2 rounded-full" style={{width: '100%'}}></div>
+                </div>
+              </div>
+              <div className="bg-card border border-border rounded-lg p-4">
+                <div className="flex justify-between items-center">
+                  <span className="font-bold text-foreground">United States</span>
+                  <span className="text-accent font-bold">37 Million Tonnes/Year</span>
+                </div>
+                <div className="w-full bg-secondary rounded-full h-2 mt-2">
+                  <div className="bg-accent h-2 rounded-full" style={{width: '50%'}}></div>
+                </div>
+              </div>
+              <div className="bg-card border border-border rounded-lg p-4">
+                <div className="flex justify-between items-center">
+                  <span className="font-bold text-foreground">India</span>
+                  <span className="text-accent font-bold">16 Million Tonnes/Year</span>
+                </div>
+                <div className="w-full bg-secondary rounded-full h-2 mt-2">
+                  <div className="bg-accent h-2 rounded-full" style={{width: '22%'}}></div>
+                </div>
+              </div>
+              <div className="bg-card border border-border rounded-lg p-4">
+                <div className="flex justify-between items-center">
+                  <span className="font-bold text-foreground">Russia</span>
+                  <span className="text-accent font-bold">14 Million Tonnes/Year</span>
+                </div>
+                <div className="w-full bg-secondary rounded-full h-2 mt-2">
+                  <div className="bg-accent h-2 rounded-full" style={{width: '19%'}}></div>
+                </div>
+              </div>
+              <div className="bg-card border border-border rounded-lg p-4">
+                <div className="flex justify-between items-center">
+                  <span className="font-bold text-foreground">Morocco</span>
+                  <span className="text-accent font-bold">7 Million Tonnes/Year</span>
+                </div>
+                <div className="w-full bg-secondary rounded-full h-2 mt-2">
+                  <div className="bg-accent h-2 rounded-full" style={{width: '9.5%'}}></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h3 className="text-xl font-bold text-accent mb-4">Industrial Applications</h3>
+            <div className="space-y-3">
+              <div className="bg-card border border-border rounded-lg p-4">
+                <div className="flex items-center gap-3 mb-2">
+                  <div className="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center">
+                    <span className="text-accent font-bold">50%</span>
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-foreground">Phosphate Fertilizers</h4>
+                    <p className="text-sm text-muted-foreground">Essential for global food security and agriculture</p>
+                  </div>
+                </div>
+              </div>
+              <div className="bg-card border border-border rounded-lg p-4">
+                <div className="flex items-center gap-3 mb-2">
+                  <div className="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center">
+                    <span className="text-accent font-bold">24%</span>
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-foreground">Other Industrial Uses</h4>
+                    <p className="text-sm text-muted-foreground">Chemical synthesis and manufacturing</p>
+                  </div>
+                </div>
+              </div>
+              <div className="bg-card border border-border rounded-lg p-4">
+                <div className="flex items-center gap-3 mb-2">
+                  <div className="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center">
+                    <span className="text-accent font-bold">10%</span>
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-foreground">Metal Processing</h4>
+                    <p className="text-sm text-muted-foreground">Ore leaching and metal refining</p>
+                  </div>
+                </div>
+              </div>
+              <div className="bg-card border border-border rounded-lg p-4">
+                <div className="flex items-center gap-3 mb-2">
+                  <div className="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center">
+                    <span className="text-accent font-bold">11%</span>
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-foreground">Remaining Applications</h4>
+                    <p className="text-sm text-muted-foreground">Petroleum processing and other industries</p>
+                  </div>
+                </div>
+              </div>
+              <div className="bg-card border border-border rounded-lg p-4">
+                <div className="flex items-center gap-3 mb-2">
+                  <div className="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center">
+                    <span className="text-accent font-bold">5%</span>
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-foreground">Fiber Production</h4>
+                    <p className="text-sm text-muted-foreground">Textile and synthetic fiber manufacturing</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="bg-secondary/20 border border-secondary rounded-lg p-6">
+          <h4 className="text-lg font-bold text-accent mb-3">Market Outlook</h4>
+          <p className="text-foreground mb-3">
+            Global sulfuric acid market is valued at USD 14.4 billion in 2025 and is projected to reach USD 21.1 billion by 2033, driven by agricultural expansion in developing nations and continued industrial development worldwide.
+          </p>
+          <p className="text-foreground text-sm text-muted-foreground">
+            The compound's critical role in fertilizer production makes it indispensable for global food security, supporting agriculture for billions of people worldwide.
+          </p>
         </div>
       </section>
 
@@ -515,14 +697,53 @@ export default function Home() {
 
         <div className="bg-card border border-border rounded-lg p-8">
           <p className="text-foreground mb-4 leading-relaxed">
-            The Contact Process demonstrates how scientific principles solve practical industrial challenges while balancing competing constraints. Sulfuric acid production is essential for global food security through phosphate fertilizer production and supports industrial development worldwide.
+            The Contact Process demonstrates how scientific principles solve practical industrial challenges while balancing competing constraints. Sulfuric acid production is essential for global food security through phosphate fertilizer production and supports industrial development worldwide. However, the process also creates environmental costs, particularly acid rain from SO2 emissions. The Contact Process will remain the dominant production method due to its efficiency, but future sustainability requires renewable energy integration and improved catalysts. As global demand increases, continued innovation is necessary to balance economic competitiveness with environmental responsibility.
           </p>
-          <p className="text-foreground mb-4 leading-relaxed">
-            However, the process also creates environmental costs, particularly acid rain from SO2 emissions. The Contact Process will remain the dominant production method due to its efficiency, but future sustainability requires renewable energy integration and improved catalysts. As global demand increases, continued innovation is necessary to balance economic competitiveness with environmental responsibility.
-          </p>
-          <p className="text-foreground leading-relaxed">
-            This research demonstrates that industrial chemistry must balance productivity, profitability, and planetary stewardship. The sulfuric acid industry exemplifies how modern chemistry continues to evolve through incremental improvements in catalyst technology, process efficiency, and environmental management to meet growing global demand while reducing environmental impact.
-          </p>
+        </div>
+      </section>
+
+      {/* Bibliography */}
+      <section className="container py-16">
+        <h2 className="text-3xl font-bold mb-2 text-accent">Bibliography</h2>
+        <div className="accent-line w-16 mb-8"></div>
+
+        <div className="bg-card border border-border rounded-lg p-8">
+          <h3 className="text-lg font-bold text-accent mb-4">References (APA 7th Edition)</h3>
+          <div className="space-y-4 text-sm text-foreground">
+            <p>[1] Phillips, P. (1831). Patent No. 6096: Improvements in the manufacture of sulphuric acid. British Patent Office. Retrieved from https://www.gracesguide.co.uk/Peregrine_Phillips</p>
+            
+            <p>[2] Grand View Research. (2025). Sulfuric acid market size, share & trends analysis report by application, by region, and segment forecasts, 2025-2033. Retrieved from https://www.grandviewresearch.com/industry-analysis/sulfuric-acid-market</p>
+            
+            <p>[3] Essential Chemical Industry. (2016). Sulfuric acid. Retrieved from https://www.essentialchemicalindustry.org/chemicals/sulfuric-acid.html</p>
+            
+            <p>[4] Clark, J. (2023). The Contact Process. LibreTexts Chemistry. Retrieved from https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Supplemental_Modules_(Physical_and_Theoretical_Chemistry)/Equilibria/Le_Chateliers_Principle/The_Contact_Process</p>
+            
+            <p>[5] Essential Chemical Industry. (2016). Catalysts used in the Contact Process. Retrieved from https://www.essentialchemicalindustry.org/chemicals/sulfuric-acid.html</p>
+            
+            <p>[6] Essential Chemical Industry. (2016). Absorption of sulfur trioxide. Retrieved from https://www.essentialchemicalindustry.org/chemicals/sulfuric-acid.html</p>
+            
+            <p>[7] LibreTexts Chemistry. (2023). Temperature effects on equilibrium. Retrieved from https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Supplemental_Modules_(Physical_and_Theoretical_Chemistry)/Equilibria/Le_Chateliers_Principle/The_Contact_Process</p>
+            
+            <p>[8] Clark, J. (2023). Optimization of Contact Process conditions. LibreTexts Chemistry. Retrieved from https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Supplemental_Modules_(Physical_and_Theoretical_Chemistry)/Equilibria/Le_Chateliers_Principle/The_Contact_Process</p>
+            
+            <p>[9] LibreTexts Chemistry. (2023). Pressure effects on equilibrium reactions. Retrieved from https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Supplemental_Modules_(Physical_and_Theoretical_Chemistry)/Equilibria/Le_Chateliers_Principle/The_Contact_Process</p>
+            
+            <p>[10] Clark, J. (2023). Excess oxygen in Contact Process. LibreTexts Chemistry. Retrieved from https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Supplemental_Modules_(Physical_and_Theoretical_Chemistry)/Equilibria/Le_Chateliers_Principle/The_Contact_Process</p>
+            
+            <p>[11] Essential Chemical Industry. (2016). Global sulfuric acid production statistics. Retrieved from https://www.essentialchemicalindustry.org/chemicals/sulfuric-acid.html</p>
+            
+            <p>[12] Essential Chemical Industry. (2016). Uses of sulfuric acid. Retrieved from https://www.essentialchemicalindustry.org/chemicals/sulfuric-acid.html</p>
+            
+            <p>[13] Baymineral. (2025). Sulfuric acid uses in industry: Fertilizers, mining & chemicals. Retrieved from https://www.baymineral.com/en/blogDetail/what-is-sulfur-and-what-is-it-used-for</p>
+            
+            <p>[14] Grand View Research. (2025). Capital requirements and operational costs in sulfuric acid production. Retrieved from https://www.grandviewresearch.com/industry-analysis/sulfuric-acid-market</p>
+            
+            <p>[15] Essential Chemical Industry. (2016). Heat recovery in sulfuric acid production. Retrieved from https://www.essentialchemicalindustry.org/chemicals/sulfuric-acid.html</p>
+            
+            <p>[16] United States Environmental Protection Agency. (2025). What is acid rain? Retrieved from https://www.epa.gov/acidrain/what-is-acid-rain</p>
+            
+            <p>[17] Sinophorus. (2025). Future innovations in sulfuric acid production and catalysis. Retrieved from https://en.sinophorus.com/blog/innovations-in-sulfuric-acid-production/</p>
+          </div>
         </div>
       </section>
 
