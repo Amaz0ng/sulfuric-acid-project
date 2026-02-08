@@ -84,19 +84,22 @@ export default function Home() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           <div>
             <p className="text-foreground mb-4 leading-relaxed">
-              The <span className="highlight-accent">Contact process</span> is the principal industrial method for manufacturing concentrated sulfuric acid. First patented in 1831 by British vinegar merchant Peregrine Phillips, this process has become fundamental to global industry.
+              Sulfuric acid represents one of the most significant chemical compounds in modern industrial society. First patented in 1831 by British vinegar merchant Peregrine Phillips, the Contact Process revolutionized acid production by achieving conversion efficiencies exceeding 99.5 percent, compared to crude methods of earlier centuries that achieved barely 1 percent conversion.
             </p>
             <p className="text-foreground mb-4 leading-relaxed">
-              Sulfuric acid is used to make phosphate fertilizers, detergents, dyes, explosives, petroleum products, and countless inorganic chemicals, making it one of the most important industrial chemicals in the world.
+              Today, global sulfuric acid production exceeds 231 million tonnes annually. The compound enables phosphate fertilizer production, supporting agriculture for billions of people worldwide. Sulfuric acid is also essential for metal refining, petroleum processing, chemical synthesis, and numerous industrial applications that form the backbone of modern manufacturing.
+            </p>
+            <p className="text-foreground mb-4 leading-relaxed">
+              This industrial process is essential for addressing global challenges in agriculture, metallurgy, and chemical manufacturing. The Contact Process demonstrates how scientific principles can be systematically applied to solve practical industrial challenges while balancing competing constraints of thermodynamics, kinetics, economics, and environmental responsibility.
             </p>
             <div className="stats-grid">
               <div className="stat-box">
-                <div className="stat-number">$49.94B</div>
-                <div className="stat-label">Market by 2030</div>
+                <div className="stat-number">231M</div>
+                <div className="stat-label">Tonnes/Year Global Production</div>
               </div>
               <div className="stat-box">
-                <div className="stat-number">+21%</div>
-                <div className="stat-label">Growth 2025-2030</div>
+                <div className="stat-number">$21.1B</div>
+                <div className="stat-label">Market Value by 2033</div>
               </div>
             </div>
           </div>
@@ -144,13 +147,14 @@ export default function Home() {
                 <h3 className="text-xl font-bold text-accent mb-3">Step 1: Sulfur Burning</h3>
                 <div className="accent-line w-8"></div>
                 <p className="text-foreground mb-4 leading-relaxed">
-                  In the first step, sulfur or sulfur-containing materials are burned in dry air to produce sulfur dioxide:
+                  In the first stage, elemental sulfur or sulfur-containing materials are burned in dry air to produce sulfur dioxide. When elemental sulfur is used: S(s) + O2(g) → SO2(g). When sulfide ores are utilized: 4FeS2(s) + 11O2(g) → 2Fe2O3(s) + 8SO2(g).
                 </p>
                 <div className="bg-card border border-border rounded p-4 mb-4">
-                  <p className="text-center font-mono text-accent text-lg">S + O₂ → SO₂</p>
+                  <p className="text-center font-mono text-accent text-sm mb-2">S(s) + O₂(g) → SO₂(g)</p>
+                  <p className="text-center font-mono text-accent text-sm">4FeS₂(s) + 11O₂(g) → 2Fe₂O₃(s) + 8SO₂(g)</p>
                 </div>
                 <p className="text-foreground mb-4 leading-relaxed">
-                  In some plants, sulfur dioxide is obtained by roasting metal sulfide ores such as zinc sulfide (ZnS) or copper sulfide (CuS) instead of elemental sulfur. The hot gas mixture is then cooled and passed through purification units, where dust and impurities such as arsenic compounds are removed to prevent catalyst poisoning.
+                  This highly exothermic reaction generates temperatures exceeding 1300 Kelvin. The hot gases are passed through heat exchangers where thermal energy is recovered to produce high-pressure steam, making the process energy-efficient. The gas mixture is then cooled and passed through purification units, where dust and impurities such as arsenic compounds are removed to prevent catalyst poisoning in subsequent steps.
                 </p>
                 <div className="bg-secondary/20 border border-secondary rounded p-4">
                   <p className="text-sm text-muted-foreground">
@@ -185,7 +189,7 @@ export default function Home() {
                     <span className="highlight-accent">Why these conditions?</span>
                   </p>
                   <p className="text-sm text-muted-foreground">
-                    Because the reaction is exothermic, lower temperature favors product formation but slows reaction rate. Higher temperature speeds up reaction but reduces yield. The 450°C compromise with catalyst provides both reasonable rate and high conversion. Multiple catalyst beds with cooling between them maintain optimal temperature.
+                    According to Le Chatelier's Principle, the exothermic forward reaction is favored at lower temperatures. However, reaction kinetics impose practical constraints. At lower temperatures, reaction rate decreases substantially. The 400-450°C temperature achieves conversion rates exceeding 99.5 percent within the brief time gases remain in contact with the catalyst. Multiple catalyst beds with cooling between them maintain optimal temperature while maximizing conversion efficiency.
                   </p>
                 </div>
               </div>
@@ -201,13 +205,14 @@ export default function Home() {
                   In the final step, sulfur trioxide is absorbed in concentrated sulfuric acid to form oleum (disulfuric acid), which is then carefully diluted with water to give more sulfuric acid:
                 </p>
                 <div className="bg-card border border-border rounded p-4 mb-4">
-                  <p className="text-center font-mono text-accent text-lg">SO₃ + H₂SO₄ → H₂S₂O₇</p>
+                  <p className="text-center font-mono text-accent text-sm mb-2">SO₃ + H₂SO₄ → H₂S₂O₇</p>
+                  <p className="text-center font-mono text-accent text-sm">H₂S₂O₇ + H₂O → 2H₂SO₄</p>
                 </div>
                 <p className="text-foreground mb-4 leading-relaxed">
-                  <span className="highlight-orange">Why not react SO₃ directly with water?</span> Direct reaction of sulfur trioxide with water forms a dense mist of acid droplets that is difficult to condense and handle safely. Absorption in concentrated acid avoids this hazard.
+                  <span className="highlight-orange">Why not react SO₃ directly with water?</span> Direct reaction of sulfur trioxide with water forms a dense mist of acid droplets that is difficult to condense and handle safely. Absorption in concentrated acid avoids this hazard and provides better control over the highly exothermic reaction.
                 </p>
                 <p className="text-foreground leading-relaxed">
-                  The final product is purified by controlled absorption, cooling, and storage in corrosion-resistant tanks to obtain commercial sulfuric acid at approximately <span className="highlight-accent">98% concentration</span>.
+                  The final product is purified by controlled absorption, cooling, and storage in corrosion-resistant tanks to obtain commercial sulfuric acid at approximately <span className="highlight-accent">98% concentration</span>. The inlet gas mixture maintains a 1:1 molar ratio of SO₂ to O₂, deliberately maintaining excess oxygen to shift equilibrium toward sulfur trioxide formation, improving conversion without significant additional cost.
                 </p>
                 <div className="bg-secondary/20 border border-secondary rounded p-4 mt-4">
                   <p className="text-sm text-muted-foreground">
@@ -315,79 +320,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Comprehensive Research Section */}
-      <section className="container py-16">
-        <h2 className="text-3xl font-bold mb-2 text-accent">Research & Analysis</h2>
-        <div className="accent-line w-16 mb-8"></div>
-
-        <div className="bg-card border border-border rounded-lg p-8 mb-8">
-          <h3 className="text-2xl font-bold text-accent mb-4">Industrial Production of Sulfuric Acid: The Contact Process</h3>
-          
-          <h4 className="text-lg font-bold text-accent mt-6 mb-3">Introduction</h4>
-          <p className="text-foreground mb-4 leading-relaxed">
-            Sulfuric acid represents one of the most significant chemical compounds in modern industrial society. First patented in 1831 by British vinegar merchant Peregrine Phillips, the Contact Process revolutionized acid production by achieving conversion efficiencies exceeding 99.5 percent, compared to the crude methods of earlier centuries that achieved barely 1 percent conversion. Today, global sulfuric acid production exceeds 231 million tonnes annually, with the market valued at USD 14.4 billion in 2025 and projected to reach USD 21.1 billion by 2033. This industrial process is essential for addressing global challenges in agriculture, metallurgy, and chemical manufacturing.
-          </p>
-
-          <h4 className="text-lg font-bold text-accent mt-6 mb-3">The Contact Process: Chemical Principles</h4>
-          <p className="text-foreground mb-4 leading-relaxed">
-            The Contact Process operates through three distinct chemical stages, each governed by fundamental principles of thermodynamics and kinetics.
-          </p>
-          
-          <div className="bg-secondary/20 border border-secondary rounded p-4 mb-4">
-            <p className="text-foreground font-bold mb-2">Stage 1: Sulfur Dioxide Production</p>
-            <p className="text-foreground text-sm mb-2">When elemental sulfur is used: S(s) + O₂(g) → SO₂(g)</p>
-            <p className="text-foreground text-sm">When sulfide ores are utilized: 4FeS₂(s) + 11O₂(g) → 2Fe₂O₃(s) + 8SO₂(g)</p>
-            <p className="text-foreground text-sm mt-2">This highly exothermic reaction generates temperatures exceeding 1300 Kelvin. The hot gases are passed through heat exchangers where thermal energy is recovered to produce high-pressure steam, making the process energy-efficient.</p>
-          </div>
-
-          <div className="bg-secondary/20 border border-secondary rounded p-4 mb-4">
-            <p className="text-foreground font-bold mb-2">Stage 2: Catalytic Conversion (Most Critical)</p>
-            <p className="text-foreground text-sm mb-2">2SO₂(g) + O₂(g) ⇌ 2SO₃(g), ΔH = -196 kJ/mol</p>
-            <p className="text-foreground text-sm">This reversible, exothermic reaction demonstrates how scientific principles guide industrial optimization. The reaction is catalyzed by vanadium(V) oxide (V₂O₅) supported on silica with caesium sulfate as a promoter.</p>
-          </div>
-
-          <div className="bg-secondary/20 border border-secondary rounded p-4 mb-4">
-            <p className="text-foreground font-bold mb-2">Stage 3: Absorption</p>
-            <p className="text-foreground text-sm mb-2">SO₃(g) + H₂SO₄(l) → H₂S₂O₇(l), then H₂S₂O₇(l) + H₂O(l) → 2H₂SO₄(l)</p>
-            <p className="text-foreground text-sm">The SO₃ cannot be directly hydrated with water as this produces a corrosive fog. Instead, SO₃ is dissolved in concentrated sulfuric acid to form oleum, then carefully reacted with water.</p>
-          </div>
-
-          <h4 className="text-lg font-bold text-accent mt-6 mb-3">Optimized Reaction Conditions</h4>
-          <p className="text-foreground mb-4 leading-relaxed">
-            The Contact Process operates at 400-450°C and 1-2 atmospheres pressure, representing a scientific compromise between competing factors. According to Le Chatelier's Principle, the exothermic forward reaction is favored at lower temperatures, meaning lower temperatures would produce higher percentages of SO₃ in the equilibrium mixture. However, reaction kinetics impose practical constraints. At lower temperatures, the reaction rate decreases substantially, and achieving practical conversion rates would require impractically long residence times. The selected temperature of 400-450°C achieves conversion rates exceeding 99.5 percent within the brief time gases remain in contact with the catalyst.
-          </p>
-          <p className="text-foreground mb-4 leading-relaxed">
-            Similarly, although higher pressures would theoretically improve conversion efficiency, the marginal improvement in conversion does not justify the substantial capital and operational costs of high-pressure reactors. The inlet gas mixture maintains a 1:1 molar ratio of SO₂ to O₂, deliberately maintaining excess oxygen to shift equilibrium toward sulfur trioxide formation, improving conversion without significant additional cost.
-          </p>
-
-          <h4 className="text-lg font-bold text-accent mt-6 mb-3">Global Production and Industrial Applications</h4>
-          <p className="text-foreground mb-4 leading-relaxed">
-            China leads global production at 74 million tonnes annually, followed by the United States (37 million tonnes), India (16 million tonnes), Russia (14 million tonnes), and Morocco (7 million tonnes). Phosphate fertilizer production accounts for 50 percent of global sulfuric acid consumption, making the compound essential for global food security. Metal processing utilizes 10 percent, other industrial applications consume 24 percent, fiber production accounts for 5 percent, and remaining applications use 11 percent.
-          </p>
-
-          <h4 className="text-lg font-bold text-accent mt-6 mb-3">Future Developments and Innovations</h4>
-          <p className="text-foreground mb-4 leading-relaxed">
-            Global demand for sulfuric acid is projected to increase substantially through 2033, driven by agricultural expansion in developing nations and continued industrial development. Research institutions and chemical companies are actively exploring advanced catalyst formulations with improved SO₂ conversion rates, process electrification using renewable energy sources, and alternative production routes to enhance efficiency and reduce environmental impact. BASF and MECS are developing next-generation catalysts that extend lifespan and improve performance. Process electrification represents an emerging strategy to reduce carbon dioxide emissions associated with heat generation in sulfuric acid plants.
-          </p>
-
-          <h4 className="text-lg font-bold text-accent mt-6 mb-3">Conclusion</h4>
-          <p className="text-foreground mb-4 leading-relaxed">
-            The Contact Process demonstrates how scientific principles solve practical industrial challenges while balancing competing constraints. Sulfuric acid production is essential for global food security through phosphate fertilizer production and supports industrial development worldwide. However, the process also creates environmental costs, particularly acid rain from SO₂ emissions. The Contact Process will remain the dominant production method due to its efficiency, but future sustainability requires renewable energy integration and improved catalysts. As global demand increases, continued innovation is necessary to balance economic competitiveness with environmental responsibility.
-          </p>
-
-          <div className="mt-6 pt-6 border-t border-border">
-            <p className="text-sm text-muted-foreground font-bold mb-2">Sources (APA 7th Edition):</p>
-            <ul className="text-xs text-muted-foreground space-y-1">
-              <li>• Phillips, P. (1831). Patent No. 6096. British Patent Office.</li>
-              <li>• Grand View Research. (2025). Sulfuric acid market analysis.</li>
-              <li>• Essential Chemical Industry. (2016). Sulfuric acid production.</li>
-              <li>• Clark, J. (2023). The Contact Process. LibreTexts Chemistry.</li>
-              <li>• Sinophorus. (2025). Future innovations in sulfuric acid production.</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
       {/* Economic Evaluation */}
       <section className="container py-16">
         <h2 className="text-3xl font-bold mb-2 text-accent">Economic Evaluation</h2>
@@ -401,10 +333,10 @@ export default function Home() {
             </h3>
             <ul className="space-y-3">
               <li className="process-step text-foreground">
-                <span className="highlight-accent">Large-scale production:</span> Enables continuous, concentrated sulfuric acid manufacture with high yields, reducing cost per tonne
+                <span className="highlight-accent">Large-scale production:</span> The Contact Process achieves conversion rates exceeding 99.5 percent, enabling continuous manufacture with exceptional yields. This high efficiency dramatically reduces cost per tonne, making sulfuric acid affordable for global fertilizer production.
               </li>
               <li className="process-step text-foreground">
-                <span className="highlight-accent">Low pressure operation:</span> Solid V₂O₅ catalyst at ~200 kPa reduces equipment costs compared to extreme-pressure processes
+                <span className="highlight-accent">Low pressure operation:</span> Solid V₂O₅ catalyst operates at approximately 200 kPa, significantly reducing equipment costs compared to extreme-pressure processes. This moderate pressure makes plant construction economically viable.
               </li>
               <li className="process-step text-foreground">
                 <span className="highlight-accent">Heat recovery:</span> Exothermic reaction enables steam generation, improving overall energy efficiency
@@ -534,13 +466,13 @@ export default function Home() {
 
         <div className="bg-card border border-border rounded-lg p-8">
           <p className="text-foreground mb-4 leading-relaxed">
-            The Contact process represents a remarkable achievement in chemical engineering—a process that has remained essentially unchanged in principle for nearly two centuries, yet continues to evolve through incremental improvements in catalyst technology, equipment design, and environmental management.
+            The Contact Process demonstrates how scientific principles solve practical industrial challenges while balancing competing constraints. Sulfuric acid production is essential for global food security through phosphate fertilizer production and supports industrial development worldwide.
           </p>
           <p className="text-foreground mb-4 leading-relaxed">
-            As global demand for sulfuric acid grows with population and agricultural needs, the Contact process will remain central to industrial chemistry. The challenge ahead lies in improving efficiency, reducing environmental impact, and managing sulfur resources sustainably while maintaining the economic viability that has made this process the global standard.
+            However, the process also creates environmental costs, particularly acid rain from SO2 emissions. The Contact Process will remain the dominant production method due to its efficiency, but future sustainability requires renewable energy integration and improved catalysts. As global demand increases, continued innovation is necessary to balance economic competitiveness with environmental responsibility.
           </p>
           <p className="text-foreground leading-relaxed">
-            Understanding the Contact process provides insight into how industrial chemistry balances thermodynamic constraints, economic realities, and environmental responsibilities to produce one of the world's most essential chemicals.
+            This research demonstrates that industrial chemistry must balance productivity, profitability, and planetary stewardship. The sulfuric acid industry exemplifies how modern chemistry continues to evolve through incremental improvements in catalyst technology, process efficiency, and environmental management to meet growing global demand while reducing environmental impact.
           </p>
         </div>
       </section>
