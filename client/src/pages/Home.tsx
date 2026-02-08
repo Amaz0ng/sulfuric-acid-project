@@ -42,7 +42,11 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="team-member">
             <div className="w-24 h-24 rounded-full mx-auto mb-3 bg-secondary border-2 border-accent overflow-hidden flex items-center justify-center">
-              <Users className="w-12 h-12 text-accent" />
+              <img 
+                src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663327166338/cXsvBsYiHfVXBVFp.jpeg" 
+                alt="Suraganov Amanzhan" 
+                className="w-full h-full object-cover"
+              />
             </div>
             <h3>Suraganov Amanzhan</h3>
             <p className="text-sm text-muted-foreground">10F</p>
