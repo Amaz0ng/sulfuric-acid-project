@@ -318,6 +318,55 @@ export default function Home() {
             <span className="highlight-accent">🎮 Interactive Controls:</span> Left-click and drag to rotate the model • Scroll wheel to zoom in/out • Right-click to pan • Use fullscreen button for immersive viewing
           </p>
         </div>
+
+        {/* 3D Model Component Explanations */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+          <div className="bg-card border border-border rounded-lg p-6">
+            <div className="flex items-center gap-3 mb-3">
+              <div className="w-6 h-6 bg-orange-500 rounded"></div>
+              <h3 className="text-lg font-bold text-accent">1) Orange Box - Sulfur Burner</h3>
+            </div>
+            <p className="text-foreground text-sm mb-3"><span className="highlight-accent">What it does:</span> Sulfur is burned in air inside this box. Oxygen reacts with sulfur.</p>
+            <p className="text-foreground text-sm mb-3"><span className="highlight-accent">What is produced:</span> Sulfur dioxide gas (SO2)</p>
+            <p className="text-foreground text-sm"><span className="highlight-accent">Why it is needed:</span> SO2 is the starting material for making sulfuric acid.</p>
+          </div>
+
+          <div className="bg-card border border-border rounded-lg p-6">
+            <div className="flex items-center gap-3 mb-3">
+              <div className="w-6 h-6 bg-blue-500 rounded"></div>
+              <h3 className="text-lg font-bold text-accent">2) Blue Cylinder - Catalytic Converter</h3>
+            </div>
+            <p className="text-foreground text-sm mb-3"><span className="highlight-accent">What it does:</span> The hot SO2 gas passes through layers of catalyst. Oxygen is present while the gas flows through.</p>
+            <p className="text-foreground text-sm mb-3"><span className="highlight-accent">What happens inside:</span> SO2 is changed into SO3 (sulfur trioxide).</p>
+            <p className="text-foreground text-sm"><span className="highlight-accent">Why it is needed:</span> SO3 is much more reactive and is needed to make sulfuric acid.</p>
+          </div>
+
+          <div className="bg-card border border-border rounded-lg p-6">
+            <div className="flex items-center gap-3 mb-3">
+              <div className="w-6 h-6 bg-green-500 rounded"></div>
+              <h3 className="text-lg font-bold text-accent">3) Green Tower - Absorption Tower</h3>
+            </div>
+            <p className="text-foreground text-sm mb-3"><span className="highlight-accent">What it does:</span> SO3 gas enters this tall tower. It is absorbed into concentrated sulfuric acid flowing inside.</p>
+            <p className="text-foreground text-sm mb-3"><span className="highlight-accent">What happens inside:</span> The gas dissolves safely into the acid. This prevents dangerous reactions with water.</p>
+            <p className="text-foreground text-sm"><span className="highlight-accent">Why it is needed:</span> This step allows sulfuric acid to be made safely and efficiently.</p>
+          </div>
+
+          <div className="bg-card border border-border rounded-lg p-6">
+            <div className="flex items-center gap-3 mb-3">
+              <div className="w-6 h-6 bg-yellow-500 rounded"></div>
+              <h3 className="text-lg font-bold text-accent">4) Yellow Tank - Sulfuric Acid Tank</h3>
+            </div>
+            <p className="text-foreground text-sm mb-3"><span className="highlight-accent">What it does:</span> The sulfuric acid is collected and stored here. The acid can be diluted to the required concentration.</p>
+            <p className="text-foreground text-sm mb-3"><span className="highlight-accent">Final product:</span> Sulfuric acid (H2SO4) ready for industrial use.</p>
+          </div>
+        </div>
+
+        <div className="mt-8 bg-secondary/20 border border-secondary rounded-lg p-6">
+          <h4 className="text-lg font-bold text-accent mb-3">Process Summary</h4>
+          <p className="text-foreground">
+            Sulfur is burned to form SO2, SO2 is converted into SO3 using a catalyst, SO3 is absorbed into acid, and sulfuric acid is collected. This integrated process demonstrates how the three stages of the Contact Process work together to safely and efficiently produce one of the world's most important industrial chemicals.
+          </p>
+        </div>
       </section>
 
       {/* Economic Evaluation */}
