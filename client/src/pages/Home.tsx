@@ -706,43 +706,50 @@ export default function Home() {
       <section className="container py-16">
         <h2 className="text-3xl font-bold mb-2 text-accent">Bibliography</h2>
         <div className="accent-line w-16 mb-8"></div>
+        <style>{`
+          .bibliography-link {
+            word-break: break-all;
+            overflow-wrap: break-word;
+            hyphens: auto;
+          }
+        `}</style>
 
         <div className="bg-card border border-border rounded-lg p-8">
           <h3 className="text-lg font-bold text-accent mb-4">References (APA 7th Edition)</h3>
-          <div className="space-y-4 text-sm text-foreground">
-            <p>[1] Phillips, P. (1831). Patent No. 6096: Improvements in the manufacture of sulphuric acid. British Patent Office. Retrieved from https://www.gracesguide.co.uk/Peregrine_Phillips</p>
+          <div className="space-y-4 text-sm text-foreground" style={{wordBreak: 'break-word', overflowWrap: 'break-word'}}>
+            <p>Phillips, P. (1831). Patent No. 6096: Improvements in the manufacture of sulphuric acid. British Patent Office. Retrieved from <a href="https://www.gracesguide.co.uk/Peregrine_Phillips" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">gracesguide.co.uk/Peregrine_Phillips</a></p>
             
-            <p>[2] Grand View Research. (2025). Sulfuric acid market size, share & trends analysis report by application, by region, and segment forecasts, 2025-2033. Retrieved from https://www.grandviewresearch.com/industry-analysis/sulfuric-acid-market</p>
+            <p>Grand View Research. (2025). Sulfuric acid market size, share & trends analysis report by application, by region, and segment forecasts, 2025-2033. Retrieved from <a href="https://www.grandviewresearch.com/industry-analysis/sulfuric-acid-market" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">grandviewresearch.com/industry-analysis/sulfuric-acid-market</a></p>
             
-            <p>[3] Essential Chemical Industry. (2016). Sulfuric acid. Retrieved from https://www.essentialchemicalindustry.org/chemicals/sulfuric-acid.html</p>
+            <p>Essential Chemical Industry. (2016). Sulfuric acid. Retrieved from <a href="https://www.essentialchemicalindustry.org/chemicals/sulfuric-acid.html" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">essentialchemicalindustry.org/chemicals/sulfuric-acid.html</a></p>
             
-            <p>[4] Clark, J. (2023). The Contact Process. LibreTexts Chemistry. Retrieved from https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Supplemental_Modules_(Physical_and_Theoretical_Chemistry)/Equilibria/Le_Chateliers_Principle/The_Contact_Process</p>
+            <p>Clark, J. (2023). The Contact Process. LibreTexts Chemistry. Retrieved from <a href="https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Supplemental_Modules_(Physical_and_Theoretical_Chemistry)/Equilibria/Le_Chateliers_Principle/The_Contact_Process" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/...</a></p>
             
-            <p>[5] Essential Chemical Industry. (2016). Catalysts used in the Contact Process. Retrieved from https://www.essentialchemicalindustry.org/chemicals/sulfuric-acid.html</p>
+            <p>Essential Chemical Industry. (2016). Catalysts used in the Contact Process. Retrieved from <a href="https://www.essentialchemicalindustry.org/chemicals/sulfuric-acid.html" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">essentialchemicalindustry.org/chemicals/sulfuric-acid.html</a></p>
             
-            <p>[6] Essential Chemical Industry. (2016). Absorption of sulfur trioxide. Retrieved from https://www.essentialchemicalindustry.org/chemicals/sulfuric-acid.html</p>
+            <p>Essential Chemical Industry. (2016). Absorption of sulfur trioxide. Retrieved from <a href="https://www.essentialchemicalindustry.org/chemicals/sulfuric-acid.html" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">essentialchemicalindustry.org/chemicals/sulfuric-acid.html</a></p>
             
-            <p>[7] LibreTexts Chemistry. (2023). Temperature effects on equilibrium. Retrieved from https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Supplemental_Modules_(Physical_and_Theoretical_Chemistry)/Equilibria/Le_Chateliers_Principle/The_Contact_Process</p>
+            <p>LibreTexts Chemistry. (2023). Temperature effects on equilibrium. Retrieved from <a href="https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Supplemental_Modules_(Physical_and_Theoretical_Chemistry)/Equilibria/Le_Chateliers_Principle/The_Contact_Process" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/...</a></p>
             
-            <p>[8] Clark, J. (2023). Optimization of Contact Process conditions. LibreTexts Chemistry. Retrieved from https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Supplemental_Modules_(Physical_and_Theoretical_Chemistry)/Equilibria/Le_Chateliers_Principle/The_Contact_Process</p>
+            <p>Clark, J. (2023). Optimization of Contact Process conditions. LibreTexts Chemistry. Retrieved from <a href="https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Supplemental_Modules_(Physical_and_Theoretical_Chemistry)/Equilibria/Le_Chateliers_Principle/The_Contact_Process" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/...</a></p>
             
-            <p>[9] LibreTexts Chemistry. (2023). Pressure effects on equilibrium reactions. Retrieved from https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Supplemental_Modules_(Physical_and_Theoretical_Chemistry)/Equilibria/Le_Chateliers_Principle/The_Contact_Process</p>
+            <p>LibreTexts Chemistry. (2023). Pressure effects on equilibrium reactions. Retrieved from <a href="https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Supplemental_Modules_(Physical_and_Theoretical_Chemistry)/Equilibria/Le_Chateliers_Principle/The_Contact_Process" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/...</a></p>
             
-            <p>[10] Clark, J. (2023). Excess oxygen in Contact Process. LibreTexts Chemistry. Retrieved from https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Supplemental_Modules_(Physical_and_Theoretical_Chemistry)/Equilibria/Le_Chateliers_Principle/The_Contact_Process</p>
+            <p>Clark, J. (2023). Excess oxygen in Contact Process. LibreTexts Chemistry. Retrieved from <a href="https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Supplemental_Modules_(Physical_and_Theoretical_Chemistry)/Equilibria/Le_Chateliers_Principle/The_Contact_Process" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/...</a></p>
             
-            <p>[11] Essential Chemical Industry. (2016). Global sulfuric acid production statistics. Retrieved from https://www.essentialchemicalindustry.org/chemicals/sulfuric-acid.html</p>
+            <p>Essential Chemical Industry. (2016). Global sulfuric acid production statistics. Retrieved from <a href="https://www.essentialchemicalindustry.org/chemicals/sulfuric-acid.html" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">essentialchemicalindustry.org/chemicals/sulfuric-acid.html</a></p>
             
-            <p>[12] Essential Chemical Industry. (2016). Uses of sulfuric acid. Retrieved from https://www.essentialchemicalindustry.org/chemicals/sulfuric-acid.html</p>
+            <p>Essential Chemical Industry. (2016). Uses of sulfuric acid. Retrieved from <a href="https://www.essentialchemicalindustry.org/chemicals/sulfuric-acid.html" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">essentialchemicalindustry.org/chemicals/sulfuric-acid.html</a></p>
             
-            <p>[13] Baymineral. (2025). Sulfuric acid uses in industry: Fertilizers, mining & chemicals. Retrieved from https://www.baymineral.com/en/blogDetail/what-is-sulfur-and-what-is-it-used-for</p>
+            <p>Baymineral. (2025). Sulfuric acid uses in industry: Fertilizers, mining & chemicals. Retrieved from <a href="https://www.baymineral.com/en/blogDetail/what-is-sulfur-and-what-is-it-used-for" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">baymineral.com/en/blogDetail/what-is-sulfur-and-what-is-it-used-for</a></p>
             
-            <p>[14] Grand View Research. (2025). Capital requirements and operational costs in sulfuric acid production. Retrieved from https://www.grandviewresearch.com/industry-analysis/sulfuric-acid-market</p>
+            <p>Grand View Research. (2025). Capital requirements and operational costs in sulfuric acid production. Retrieved from <a href="https://www.grandviewresearch.com/industry-analysis/sulfuric-acid-market" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">grandviewresearch.com/industry-analysis/sulfuric-acid-market</a></p>
             
-            <p>[15] Essential Chemical Industry. (2016). Heat recovery in sulfuric acid production. Retrieved from https://www.essentialchemicalindustry.org/chemicals/sulfuric-acid.html</p>
+            <p>Essential Chemical Industry. (2016). Heat recovery in sulfuric acid production. Retrieved from <a href="https://www.essentialchemicalindustry.org/chemicals/sulfuric-acid.html" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">essentialchemicalindustry.org/chemicals/sulfuric-acid.html</a></p>
             
-            <p>[16] United States Environmental Protection Agency. (2025). What is acid rain? Retrieved from https://www.epa.gov/acidrain/what-is-acid-rain</p>
+            <p>United States Environmental Protection Agency. (2025). What is acid rain? Retrieved from <a href="https://www.epa.gov/acidrain/what-is-acid-rain" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">epa.gov/acidrain/what-is-acid-rain</a></p>
             
-            <p>[17] Sinophorus. (2025). Future innovations in sulfuric acid production and catalysis. Retrieved from https://en.sinophorus.com/blog/innovations-in-sulfuric-acid-production/</p>
+            <p>Sinophorus. (2025). Future innovations in sulfuric acid production and catalysis. Retrieved from <a href="https://en.sinophorus.com/blog/innovations-in-sulfuric-acid-production/" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">sinophorus.com/blog/innovations-in-sulfuric-acid-production/</a></p>
           </div>
         </div>
       </section>
